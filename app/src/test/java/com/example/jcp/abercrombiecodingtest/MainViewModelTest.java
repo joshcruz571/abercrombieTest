@@ -59,6 +59,7 @@ public class MainViewModelTest {
         verify(listener).onExploreDataChanger(mockExploreData);
         assertEquals(viewModel.progressVisibility.get(), View.INVISIBLE);
         assertEquals(viewModel.recyclerViewVisibility.get(), View.VISIBLE);
+        assertEquals(viewModel.infoMessageVisibility.get(), View.INVISIBLE);
     }
 
     @Test
