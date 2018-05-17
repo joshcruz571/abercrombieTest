@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.Html" />
+
+        <variable
+            name="viewModel"
+            type="com.example.jcp.abercrombiecodingtest.viewmodel.ItemViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardElevation="@dimen/card_elevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card_background_description"
+                android:scaleType="fitCenter"
+                app:loadImageToPicasso="@{viewModel.backgroundImage}"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/initial_padding_linear">
+
+                <TextView
+                    android:id="@+id/i_card_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@{viewModel.topDescription}"
+                    android:textSize="@dimen/top_string_size"
+                    app:isVisible="@{viewModel.topDescription}"
+                    tools:text="Placeholder" />
+
+                <TextView
+                    android:id="@+id/i_card_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/title_string_margin_top"
+                    android:gravity="center"
+                    android:text="@{viewModel.title}"
+                    android:textSize="@dimen/title_string_size"
+                    app:isVisible="@{viewModel.title}"
+                    android:textStyle="bold"
+                    tools:text="Placeholder" />
+
+                <TextView
+                    android:id="@+id/i_card_promo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/promo_string_margin_top"
+                    android:gravity="center"
+                    android:text="@{viewModel.promoMEssage}"
+                    android:textSize="@dimen/promo_string_size"
+                    app:isVisible="@{viewModel.promoMEssage}"
+                    tools:ignore="SmallSp"
+                    tools:text="Placeholder" />
+
+                <TextView
+                    android:id="@+id/i_card_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/bottom_string_margin_top"
+                    android:gravity="center"
+                    android:text="@{Html.fromHtml(viewModel.bottomDescription)}"
+                    android:textSize="@dimen/bottom_string_size"
+                    app:isVisible="@{viewModel.bottomDescription}"
+                    tools:text="Placeholder" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:padding="@dimen/linear_buttons_padding"
+                app:inflateContent="@{viewModel.content}">
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

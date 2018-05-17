@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_button">3dp</dimen>
+    <dimen name="card_elevation">5dp</dimen>
+    <dimen name="default_image_height">300dp</dimen>
+    <dimen name="initial_padding_linear">30dp</dimen>
+    <dimen name="top_string_size">13sp</dimen>
+    <dimen name="title_string_size">17sp</dimen>
+    <dimen name="title_string_margin_top">5dp</dimen>
+    <dimen name="promo_string_margin_top">5dp</dimen>
+    <dimen name="promo_string_size">11sp</dimen>
+    <dimen name="bottom_string_margin_top">10dp</dimen>
+    <dimen name="bottom_string_size">13sp</dimen>
+    <dimen name="linear_buttons_padding">10dp</dimen>
+    <dimen name="margin_width_border_buttons">1dp</dimen>
+</resources>
